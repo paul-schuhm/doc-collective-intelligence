@@ -12,7 +12,11 @@
  * Un premier example avec une liste de recommandations de films basé sur des critiques (notes allant de 1 a 5) d'utilisateur·ices (cf le livre)
  */
 
-$data = array(
+
+/**
+ * Jeu de données de notes de films laissées par des critiques
+ */
+$critics = array(
     'Lisa Rose' => array(
         'Lady in the Water' => 2.5,
         'Snakes on a Plane' => 3.5,
@@ -22,3 +26,31 @@ $data = array(
         'The Night Listener' => 2.5,
     )
 );
+
+
+function mean(array $values): float
+{
+    if (empty($values))
+        return 0;
+    return array_sum($values) / count($values);
+}
+
+function variance($values): float
+{
+
+    $sumOfSquares = array_map(fn ($x) => $x * $x, $values);
+    $mean = mean($values);
+
+    return mean($sumOfSquares) - $mean * $mean;
+}
+
+function covariance($seriesX, $seriesY): float
+{
+
+    if (count($seriesX) !== count($seriesY))
+        return false;
+
+    $product = array_map(fn ($x, $y) => $x * $y, $seriesX, $seriesY);
+
+    return mean($product) - mean($seriesX) * mean($seriesY);
+}
