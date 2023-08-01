@@ -3,22 +3,22 @@
 /**
  * Jeu de données de notes de films laissées par des critiques
  */
-$critics = array(
+define('CRITICS', array(
     'Lisa Rose' => array(
         'Lady in the Water' => 2.5,
         'Snakes on a Plane' => 3.5,
         'Just My Luck' => 3.,
         'Superman Returns' => 3.5,
         'You, Me and Dupree' => 2.5,
-        'The Night Listener' => 2.5,
+        'The Night Listener' => 3,
     ),
     'Gene Seymour' => array(
         'Lady in the Water' => 3.,
         'Snakes on a Plane' => 3.5,
         'Just My Luck' => 1.5,
         'Superman Returns' => 5,
-        'You, Me and Dupree' => 3,
-        'The Night Listener' => 3.5,
+        'The Night Listener' => 3.,
+        'You, Me and Dupree' => 3.5,
     ),
     'Michael Phillips' => array(
         'Lady in the Water' => 2.5,
@@ -54,4 +54,4 @@ $critics = array(
         'You, Me and Dupree' => 1.,
     ),
 
-);
+));

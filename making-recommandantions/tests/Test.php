@@ -3,8 +3,8 @@
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\TestDox;
 
-require __DIR__ . '/../helpers.php';
-require __DIR__ . '/../data.php';
+require_once __DIR__ . '/../helpers.php';
+require_once __DIR__ . '/../data.php';
 
 final class Test extends TestCase
 {
@@ -80,5 +80,21 @@ final class Test extends TestCase
         $seriesX = array(12, 13, 25, 39);
         $seriesY = array(67, 45, 32, 21);
         $this->assertEqualsWithDelta(covariance($seriesX, $seriesY), covariance($seriesY, $seriesX),  0.1);
+    }
+
+    public function testSimilarityDistanceDomainOfDefinition(): void
+    {
+        $simlilarityScore = similarityDistance(CRITICS, 'Lisa Rose', 'Toby');
+        $this->assertThat(
+            $simlilarityScore,
+            $this->logicalAnd($this->lessThan(1, $simlilarityScore), $this->greaterThan(0, $simlilarityScore))
+        );
+    }
+
+    public function testSimilarityDistanceRandomData(): void
+    {
+        //Voir démo dans le livre
+        $simlilarityScore = similarityDistance(CRITICS, 'Lisa Rose', 'Gene Seymour');
+        $this->assertEqualsWithDelta(0.148148, $simlilarityScore,  self::EPSILON);
     }
 }
