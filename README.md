@@ -1,5 +1,12 @@
 # doc-collective-intelligence
 
+- [doc-collective-intelligence](#doc-collective-intelligence)
+  - [Définitions](#définitions)
+  - [Démos](#démos)
+  - [Tests](#tests)
+  - [Ressources](#ressources)
+
+
 Ensemble d'algorithmes d'intelligence collective et de machine learning. Basé sur le livre *Programming Collective Intelligence (Toby Segaran, O'Reilly, 2007)*
 
 ## Définitions
