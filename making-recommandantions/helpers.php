@@ -57,14 +57,14 @@ function variance($values): float
 }
 
 /**
- * Retourne la covariance de deux séries de données numériques. Retourne faux si les deux séries ne contiennent pas le même nombre d'éléments
+ * Retourne la covariance de deux séries de données numériques. Retourne NULL si les deux séries ne contiennent pas le même nombre d'éléments
  */
-function covariance($seriesX, $seriesY): float
+function covariance($seriesX, $seriesY): ?float
 {
 
     //Les deux séries doivent être comparables
     if (count($seriesX) !== count($seriesY))
-        return false;
+        return NULL;
 
     $product = array_map(fn ($x, $y) => $x * $y, $seriesX, $seriesY);
 
