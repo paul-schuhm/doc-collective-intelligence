@@ -45,7 +45,7 @@ function mean(array $values): ?float
 /**
  * Retourne la variance d'une série de données numériques. Si la série est vide, retourne NULL
  */
-function variance($values): float
+function variance($values): ?float
 {
     if (empty($values))
         return NULL;

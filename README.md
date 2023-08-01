@@ -36,7 +36,7 @@ Lancer les tests pour chaque démo :
 
 ~~~
 #Executer les tests de la démo "Système de recommandations"
-php making-recommandantions/vendor/bin/phpunit making-recommandantions/tests/
+php making-recommandantions/vendor/bin/phpunit making-recommandantions/tests --testdox
 ~~~
 
 ## Ressources
