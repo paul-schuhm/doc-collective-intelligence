@@ -9,17 +9,27 @@ Ensemble d'algorithmes d'intelligence collective et de machine learning. Basé s
 
 ## Démos
 
+Pour chaque démo, exécuter le script d'entrée `index.php`
+
+~~~
+#Démo Système de recommandations
+php making-recommandations/index.php
+~~~
+
 - [Système de recommandations](./making-recommandantions/index.php)
 
 ## Tests
 
+Installer [phpunit](https://phpunit.de/getting-started/phpunit-10.html) à la racine du projet via composer, avec `composer init`. 
 
-Installer [phpunit](https://phpunit.de/getting-started/phpunit-10.html) via composer avec `composer init`. Lancer les tests
+Lancer les tests pour chaque démo :
 
 ~~~
-./vendor/bin/phpunit tests
+#Executer les tests de la démo "Système de recommandations"
+php making-recommandantions/vendor/bin/phpunit making-recommandantions/tests/
 ~~~
 
 ## Ressources
 
 - [Programming Collective Intelligence (Toby Segaran, O'Reilly, 2007)](https://learning.oreilly.com/library/view/programming-collective-intelligence/9780596529321/)
+- [PHPUnit](https://docs.phpunit.de/en/10.2/index.html), le manuel de PHPUnit utilisé pour tester la bonne implémentation des algorithmes
