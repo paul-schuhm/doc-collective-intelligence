@@ -73,4 +73,12 @@ final class Test extends TestCase
         $seriesY = array(67, 45, 32, 21);
         $this->assertEqualsWithDelta(-165.815, covariance($seriesX, $seriesY),  0.1);
     }
+
+    #[TestDox('Symétrie du calcul de la covariance (inversion des arguments)')]
+    public function testCovarianceSymmetry(): void
+    {
+        $seriesX = array(12, 13, 25, 39);
+        $seriesY = array(67, 45, 32, 21);
+        $this->assertEqualsWithDelta(covariance($seriesX, $seriesY), covariance($seriesY, $seriesX),  0.1);
+    }
 }
