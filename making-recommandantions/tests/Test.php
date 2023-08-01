@@ -42,4 +42,35 @@ final class Test extends TestCase
         $series = array(2, 7, 3, 12, 9);
         $this->assertEqualsWithDelta(13.84, variance($series),  self::EPSILON);
     }
+    #[TestDox('Calcul covariance de deux séries de tailles différentes')]
+    public function testCovarianceInvalidInputs(): void
+    {
+        $seriesX = array(2, 7, 3, 12, 9);
+        $seriesY = array(1, 2, 3);
+        $this->assertEquals(NULL, covariance($seriesX, $seriesY));
+    }
+
+    #[TestDox('Calcul covariance de deux séries identiques')]
+    public function testCovarianceSameSeries(): void
+    {
+        $seriesX = array(2, 7, 3, 12, 9);
+        $seriesY = array(2, 7, 3, 12, 9);
+        $this->assertEqualsWithDelta(13.84, covariance($seriesX, $seriesY),  self::EPSILON);
+    }
+
+    #[TestDox('Calcul covariance de deux séries quelconques 1')]
+    public function testCovarianceRandomSeries(): void
+    {
+        $seriesX = array(1245, 1415, 1312, 1427, 1510, 1590);
+        $seriesY = array(100, 123, 129, 143, 150, 197);
+        $this->assertEqualsWithDelta(3148.5, covariance($seriesX, $seriesY),  self::EPSILON);
+    }
+
+    #[TestDox('Calcul covariance de deux séries quelconques 2')]
+    public function testCovarianceRandomSeries2(): void
+    {
+        $seriesX = array(12, 13, 25, 39);
+        $seriesY = array(67, 45, 32, 21);
+        $this->assertEqualsWithDelta(-165.815, covariance($seriesX, $seriesY),  0.1);
+    }
 }
