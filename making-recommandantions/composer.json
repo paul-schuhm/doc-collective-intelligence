@@ -1,0 +1,17 @@
+{
+    "name": "paul/making-recommandantions",
+    "autoload": {
+        "psr-4": {
+            "Paul\\MakingRecommandantions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "p. schuhmacher",
+            "email": "contact@pschuhmacher.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
+}
