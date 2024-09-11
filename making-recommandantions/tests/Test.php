@@ -84,7 +84,7 @@ final class Test extends TestCase
 
     public function testSimilarityDistanceDomainOfDefinition(): void
     {
-        $simlilarityScore = similarityDistance(CRITICS, 'Lisa Rose', 'Toby');
+        $simlilarityScore = similarityDistance(CRITICS, 'Lisa Rose', 'Gene Seymour');
         $this->assertThat(
             $simlilarityScore,
             $this->logicalAnd($this->lessThan(1, $simlilarityScore), $this->greaterThan(0, $simlilarityScore))

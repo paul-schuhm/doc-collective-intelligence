@@ -31,17 +31,19 @@ function similarityDistance(array $data, string $person1, string $person2): ?flo
     if (empty($shared))
         return NULL;
 
-    $distance = 0;
+    $distanceSquared = 0;
 
     foreach ($shared as $item) {
         $score1 = $data[$person1][$item];
         $score2 = $data[$person2][$item];
-        $distance += pow($score1 - $score2, 2);
+        $distanceSquared += pow($score1 - $score2, 2);
     }
 
-    var_dump($shared);
 
-    return 1 / (1 + sqrt($distance));
+    //Euclidian distance (on garde la racine)
+    // return 1 / (1 + $distanceSquared);
+    //Squared Euclidean distance (on omet de prendre la racine)
+    return 1 / (1 + $distanceSquared);
 }
 
 /**
