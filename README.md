@@ -44,4 +44,5 @@ php making-recommandantions/vendor/bin/phpunit making-recommandantions/tests --t
 - [Programming Collective Intelligence (Toby Segaran, O'Reilly, 2007)](https://learning.oreilly.com/library/view/programming-collective-intelligence/9780596529321/)
 - [ProgrammingCollectiveIntelligenceExercises](https://github.com/AndrewLaing/ProgrammingCollectiveIntelligenceExercises), un dépôt des sources pour les exercices (Pyhon)
 - [PHPUnit](https://docs.phpunit.de/en/10.2/index.html), le manuel de PHPUnit utilisé pour tester la bonne implémentation des algorithmes
-- [Euclidean distance (and Squared Euclidian Distance)](https://en.wikipedia.org/wiki/Euclidean_distance)
+- [Euclidean distance (and Squared Euclidian Distance)](https://en.wikipedia.org/wiki/Euclidean_distance), Wikipédia
+- [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient), Wikipédia
